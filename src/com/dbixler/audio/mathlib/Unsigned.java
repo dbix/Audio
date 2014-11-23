@@ -35,15 +35,4 @@ public class Unsigned {
     return ((l >> 63) & 1) == 1 ? -d : d;
   }
 
-  public static void main(String args[]) {
-    System.out.println(Unsigned.Byte((byte) -64));
-    System.out.println(Unsigned.Integer(-1073741824));
-    System.out.println(Unsigned.Float(-Float.floatToRawIntBits(DSPMath.FLT_MAX_VALUE) >> 1));
-    System.out.println(Unsigned.Double(-Double.doubleToRawLongBits(DSPMath.DBL_MAX_VALUE) >> 1));
-    System.out.println(Unsigned.Float(Float.NaN));
-    System.out.println(Unsigned.Double(Double.NaN));
-    System.out.println(Float.floatToIntBits(Float.NaN));
-    System.out.println(Double.doubleToRawLongBits(Double.NaN));
-  }
-
 }

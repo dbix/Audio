@@ -5,7 +5,7 @@ import java.io.File;
 /**
  * A file input/output class specifically
  * for audio files.
- *
+ * <p/>
  * Created by dbixler on 11/19/2014.
  */
 public class FileIO {
@@ -19,40 +19,33 @@ public class FileIO {
    * stripWavHeader(File f)
    */
 
-  public static void addWavHeader(File f)
-  {
+  public static void addWavHeader(File f) {
 
   }
 
-  public static void checkWavHeader(File f)
-  {
+  public static void checkWavHeader(File f) {
 
   }
 
-  public static float[][] readPcm(String file_path)
-  {
+  public static float[][] readPcm(String file_path) {
     float[][] pcm = null;
     return pcm;
   }
 
-  public static float[][] readWav(String file_path)
-  {
+  public static float[][] readWav(String file_path) {
     float[][] wav = null;
     return wav;
   }
 
-  public static void stripWavHeader(File f)
-  {
+  public static void stripWavHeader(File f) {
 
   }
 
-  public static boolean writePcm(float[][] stereoPCM)
-  {
+  public static boolean writePcm(float[][] stereoPCM) {
     return false;
   }
 
-  public static boolean writeWav(float[][] stereoPCM)
-  {
+  public static boolean writeWav(float[][] stereoPCM) {
     return false;
   }
 

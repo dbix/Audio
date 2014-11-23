@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * A math library that is similar to java.lang.Math but with a few extra twists.
- * <p>
+ * <p/>
  * Created by dbixler on 11/20/2014.
  */
 public class DSPMath {
@@ -72,8 +72,7 @@ public class DSPMath {
    */
   public static final int FLT_SIGNIF_BIT_MASK = 0x007FFFFF;
 
-  static
-  {
+  static {
     // verify bit masks cover all bit positions and that the bit
     // masks are non-overlapping
     assert (((FLT_SIGN_BIT_MASK | FLT_EXP_BIT_MASK | FLT_SIGNIF_BIT_MASK) == ~0) && (((FLT_SIGN_BIT_MASK & FLT_EXP_BIT_MASK) == 0)
@@ -133,8 +132,7 @@ public class DSPMath {
    */
   public static final long DBL_SIGNIF_BIT_MASK = 0x000FFFFFFFFFFFFFL;
 
-  static
-  {
+  static {
     // verify bit masks cover all bit positions and that the bit
     // masks are non-overlapping
     assert (((DBL_SIGN_BIT_MASK | DBL_EXP_BIT_MASK | DBL_SIGNIF_BIT_MASK) == ~0L) && (((DBL_SIGN_BIT_MASK & DBL_EXP_BIT_MASK) == 0L)
@@ -178,8 +176,7 @@ public class DSPMath {
    * @param f2 the divisor.
    * @return the remainder when {@code f1} is divided by {@code f2}.
    */
-  public static double IEEEremainder(double f1, double f2)
-  {
+  public static double IEEEremainder(double f1, double f2) {
     return StrictMath.IEEEremainder(f1, f2); // delegate to StrictMath
   }
 
@@ -189,8 +186,7 @@ public class DSPMath {
    * @param a the argument whose absolute value is to be determined
    * @return the absolute value of the argument
    */
-  public static long abs(long a)
-  {
+  public static long abs(long a) {
     return (a < 0) ? -a : a;
   }
 
@@ -200,8 +196,7 @@ public class DSPMath {
    * @param a the argument whose absolute value is to be determined
    * @return the absolute value of the argument
    */
-  public static float abs(float a)
-  {
+  public static float abs(float a) {
     return (a < 0) ? -a : a;
   }
 
@@ -211,8 +206,7 @@ public class DSPMath {
    * @param a the argument whose absolute value is to be determined
    * @return the absolute value of the argument
    */
-  public static double abs(double a)
-  {
+  public static double abs(double a) {
     return (a < 0) ? -a : a;
   }
 
@@ -222,8 +216,7 @@ public class DSPMath {
    * @param a the argument whose absolute value is to be determined
    * @return the absolute value of the argument
    */
-  public static int abs(int a)
-  {
+  public static int abs(int a) {
     return (a < 0) ? -a : a;
   }
 
@@ -233,8 +226,7 @@ public class DSPMath {
    * @param a the value whose arc cosine is to be returned.
    * @return the arc cosine of the argument.
    */
-  public static double acos(double a)
-  {
+  public static double acos(double a) {
     return StrictMath.acos(a); // default impl. delegates to StrictMath
   }
 
@@ -244,8 +236,7 @@ public class DSPMath {
    * @param a the value whose arc sine is to be returned.
    * @return the arc sine of the argument.
    */
-  public static double asin(double a)
-  {
+  public static double asin(double a) {
     return StrictMath.asin(a); // default impl. delegates to StrictMath
   }
 
@@ -255,8 +246,7 @@ public class DSPMath {
    * @param a the value whose arc tangent is to be returned.
    * @return the arc tangent of the argument.
    */
-  public static double atan(double a)
-  {
+  public static double atan(double a) {
     return StrictMath.atan(a); // default impl. delegates to StrictMath
   }
 
@@ -266,8 +256,7 @@ public class DSPMath {
    * @param a a value.
    * @return the cube root of {@code a}.
    */
-  public static double cbrt(double a)
-  {
+  public static double cbrt(double a) {
     return StrictMath.cbrt(a);
   }
 
@@ -279,8 +268,7 @@ public class DSPMath {
    * that is greater than or equal to the argument and is equal to a
    * mathematical integer.
    */
-  public static double ceil(double a)
-  {
+  public static double ceil(double a) {
     return StrictMath.ceil(a); // default impl. delegates to StrictMath
   }
 
@@ -292,8 +280,7 @@ public class DSPMath {
    * @return value with the magnitude of {@code magnitude} and the sign of
    * {@code sign}.
    */
-  public static float copySign(float magnitude, float sign)
-  {
+  public static float copySign(float magnitude, float sign) {
     return StrictMath.copySign(magnitude, sign);
   }
 
@@ -305,8 +292,7 @@ public class DSPMath {
    * @return value with the magnitude of {@code magnitude} and the sign of
    * {@code sign}.
    */
-  public static double copySign(double magnitude, double sign)
-  {
+  public static double copySign(double magnitude, double sign) {
     return StrictMath.copySign(magnitude, sign);
   }
 
@@ -316,8 +302,7 @@ public class DSPMath {
    * @param a an angle, in radians.
    * @return the cosine of the argument.
    */
-  public static double cos(double a)
-  {
+  public static double cos(double a) {
     return StrictMath.cos(a); // default impl. delegates to StrictMath
   }
 
@@ -327,8 +312,7 @@ public class DSPMath {
    * @param x The number whose hyperbolic cosine is to be returned.
    * @return The hyperbolic cosine of {@code x}.
    */
-  public static double cosh(double x)
-  {
+  public static double cosh(double x) {
     return StrictMath.cosh(x);
   }
 
@@ -338,8 +322,7 @@ public class DSPMath {
    * @param a power to raise e by.
    * @return e^a
    */
-  public static double exp(double a)
-  {
+  public static double exp(double a) {
     return StrictMath.exp(a); // default impl. delegates to StrictMath
   }
 
@@ -351,8 +334,7 @@ public class DSPMath {
    * that less than or equal to the argument and is equal to a
    * mathematical integer.
    */
-  public static double floor(double a)
-  {
+  public static double floor(double a) {
     return StrictMath.floor(a); // default impl. delegates to StrictMath
   }
 
@@ -362,8 +344,7 @@ public class DSPMath {
    * @param f floating point value
    * @return the unbiased exponent in IEE 754 format
    */
-  public static int getExponent(float f)
-  {
+  public static int getExponent(float f) {
     return ((Float.floatToRawIntBits(f) & FLT_EXP_BIT_MASK) >> (FLT_SIGNIFICAND_WIDTH - 1)) - FLT_EXP_BIAS;
   }
 
@@ -373,8 +354,7 @@ public class DSPMath {
    * @param d a double value
    * @return the unbiased exponent in IEE 754 format
    */
-  public static int getExponent(double d)
-  {
+  public static int getExponent(double d) {
     return (int) (((Double.doubleToRawLongBits(d) & DBL_EXP_BIT_MASK) >> (DBL_SIGNIFICAND_WIDTH - 1)) - DBL_EXP_BIAS);
   }
 
@@ -383,8 +363,7 @@ public class DSPMath {
    *
    * @return sqrt(x*x + y*y)
    */
-  public static double hypot(double x, double y)
-  {
+  public static double hypot(double x, double y) {
     return StrictMath.hypot(x, y);
   }
 
@@ -395,8 +374,7 @@ public class DSPMath {
    * @return {@code true} if the argument is a finite floating-point value,
    * {@code false} otherwise.
    */
-  public static boolean isFinite(double d)
-  {
+  public static boolean isFinite(double d) {
     return Math.abs(d) <= DBL_MAX_VALUE;
   }
 
@@ -407,8 +385,7 @@ public class DSPMath {
    * @return {@code true} if the argument is a finite floating-point value,
    * {@code false} otherwise.
    */
-  public static boolean isFinite(float f)
-  {
+  public static boolean isFinite(float f) {
     return Math.abs(f) <= FLT_MAX_VALUE;
   }
 
@@ -418,8 +395,7 @@ public class DSPMath {
    * @param a number to take natural log of.
    * @return natural log of input.
    */
-  public static double log(double a)
-  {
+  public static double log(double a) {
     return StrictMath.log(a); // default impl. delegates to StrictMath
   }
 
@@ -430,8 +406,7 @@ public class DSPMath {
    * @param b any integer value
    * @return the max value between a or b
    */
-  public static int max(int a, int b)
-  {
+  public static int max(int a, int b) {
     return (a > b ? a : b);
   }
 
@@ -442,8 +417,7 @@ public class DSPMath {
    * @param b any long value
    * @return the max value between a or b
    */
-  public static long max(long a, long b)
-  {
+  public static long max(long a, long b) {
     return (a > b ? a : b);
   }
 
@@ -454,13 +428,11 @@ public class DSPMath {
    * @param b any float value
    * @return the max value between a or b
    */
-  public static float max(float a, float b)
-  {
+  public static float max(float a, float b) {
     if (a != a)
       return a; // a is NaN
     if ((a == 0.0f) && (b == 0.0f)
-        && (Float.floatToIntBits(a) == FLT_NEG_ZERO_BITS))
-    {
+        && (Float.floatToIntBits(a) == FLT_NEG_ZERO_BITS)) {
       return b;
     }
     return (a >= b) ? a : b;
@@ -473,13 +445,11 @@ public class DSPMath {
    * @param b any double value
    * @return the max value between a or b
    */
-  public static double max(double a, double b)
-  {
+  public static double max(double a, double b) {
     if (a != a)
       return a; // a is NaN
     if ((a == 0.0d) && (b == 0.0d)
-        && (Double.doubleToLongBits(a) == DBL_NEG_ZERO_BITS))
-    {
+        && (Double.doubleToLongBits(a) == DBL_NEG_ZERO_BITS)) {
       return b;
     }
     return (a >= b) ? a : b;
@@ -493,8 +463,7 @@ public class DSPMath {
    * @param c any integer value
    * @return the max value between a, b, and c
    */
-  public static int max3(int a, int b, int c)
-  {
+  public static int max3(int a, int b, int c) {
     return max(max(a, b), c);
   }
 
@@ -506,8 +475,7 @@ public class DSPMath {
    * @param c any long value
    * @return the max value between a, b, and c
    */
-  public static long max3(long a, long b, long c)
-  {
+  public static long max3(long a, long b, long c) {
     return max(max(a, b), c);
   }
 
@@ -519,8 +487,7 @@ public class DSPMath {
    * @param c any float value
    * @return the max value between a, b, and c
    */
-  public static float max3(float a, float b, float c)
-  {
+  public static float max3(float a, float b, float c) {
     return max(max(a, b), c);
   }
 
@@ -532,8 +499,7 @@ public class DSPMath {
    * @param c any double value
    * @return the max value between a, b, and c
    */
-  public static double max3(double a, double b, double c)
-  {
+  public static double max3(double a, double b, double c) {
     return max(max(a, b), c);
   }
 
@@ -543,14 +509,12 @@ public class DSPMath {
    * @param input an audio buffer
    * @return value of max amplitude
    */
-  public static float maxAmplitude(float[][] input)
-  {
+  public static float maxAmplitude(float[][] input) {
     float max_amplitude = 0.0f;
     float amplitude_left;
     float amplitude_right;
 
-    for (int i = 0; i < input[0].length; i++)
-    {
+    for (int i = 0; i < input[0].length; i++) {
       amplitude_left = abs(input[0][i]);
       amplitude_right = abs(input[1][i]);
       max_amplitude = max3(amplitude_left, amplitude_right, max_amplitude);
@@ -566,8 +530,7 @@ public class DSPMath {
    * @param input an audio buffer
    * @return the value of the maximum multiplier
    */
-  public static float maxMultiplier(float[][] input)
-  {
+  public static float maxMultiplier(float[][] input) {
     float max_amplitude = maxAmplitude(input);
     return 1 / max_amplitude;
   }
@@ -579,8 +542,7 @@ public class DSPMath {
    * @param b any integer value.
    * @return the smaller of {@code a} and {@code b}.
    */
-  public static int min(int a, int b)
-  {
+  public static int min(int a, int b) {
     return (a <= b) ? a : b;
   }
 
@@ -591,8 +553,7 @@ public class DSPMath {
    * @param b any long value.
    * @return the smaller of {@code a} and {@code b}.
    */
-  public static long min(long a, long b)
-  {
+  public static long min(long a, long b) {
     return (a <= b) ? a : b;
   }
 
@@ -603,13 +564,11 @@ public class DSPMath {
    * @param b another argument.
    * @return the smaller of {@code a} and {@code b}.
    */
-  public static float min(float a, float b)
-  {
+  public static float min(float a, float b) {
     if (a != a)
       return a; // a is NaN
     if ((a == 0.0f) && (b == 0.0f)
-        && (Float.floatToIntBits(b) == FLT_NEG_ZERO_BITS))
-    {
+        && (Float.floatToIntBits(b) == FLT_NEG_ZERO_BITS)) {
       return b;
     }
     return (a <= b) ? a : b;
@@ -622,13 +581,11 @@ public class DSPMath {
    * @param b another argument.
    * @return the smaller of {@code a} and {@code b}.
    */
-  public static double min(double a, double b)
-  {
+  public static double min(double a, double b) {
     if (a != a)
       return a; // a is NaN
     if ((a == 0.0d) && (b == 0.0d)
-        && (Double.doubleToLongBits(b) == DBL_NEG_ZERO_BITS))
-    {
+        && (Double.doubleToLongBits(b) == DBL_NEG_ZERO_BITS)) {
       return b;
     }
     return (a <= b) ? a : b;
@@ -639,10 +596,8 @@ public class DSPMath {
    *
    * @param input an audio buffer
    */
-  public static void printStereoBuffer(float[][] input)
-  {
-    for (int i = 0; i < input[0].length; i++)
-    {
+  public static void printStereoBuffer(float[][] input) {
+    for (int i = 0; i < input[0].length; i++) {
       String l, r;
       if (input[0][i] < 0) l = "" + input[0][i];
       else l = " " + input[0][i];
@@ -661,12 +616,10 @@ public class DSPMath {
    * @param message user message before print
    * @param input   an audio buffer
    */
-  public static void printStereoBuffer(String message, float[][] input)
-  {
+  public static void printStereoBuffer(String message, float[][] input) {
     System.out.println(message);
 
-    for (int i = 0; i < input[0].length; i++)
-    {
+    for (int i = 0; i < input[0].length; i++) {
       String l, r;
       if (input[0][i] < 0) l = "" + input[0][i];
       else l = " " + input[0][i];
@@ -683,8 +636,7 @@ public class DSPMath {
    *
    * @return random value x such that 0.0 <= x < 1.0
    */
-  public static double random()
-  {
+  public static double random() {
     if (randomNumberGenerator == null)
       randomNumberGenerator = new Random();
     return randomNumberGenerator.nextDouble();
@@ -698,8 +650,7 @@ public class DSPMath {
    * @see Integer#MAX_VALUE
    * @see Integer#MIN_VALUE
    */
-  public static int round(float a)
-  {
+  public static int round(float a) {
     return (int) floor(a + 0.5f);
   }
 
@@ -711,8 +662,7 @@ public class DSPMath {
    * @see Integer#MAX_VALUE
    * @see Integer#MIN_VALUE
    */
-  public static int round(double a)
-  {
+  public static int round(double a) {
     return (int) floor(a + 0.5f);
   }
 
@@ -722,8 +672,7 @@ public class DSPMath {
    * @param a an angle, in radians.
    * @return the sine of the argument.
    */
-  public static double sin(double a)
-  {
+  public static double sin(double a) {
     return StrictMath.sin(a); // default impl. delegates to StrictMath
   }
 
@@ -733,8 +682,7 @@ public class DSPMath {
    * @param x The number whose hyperbolic cosine is to be returned.
    * @return The hyperbolic cosine of {@code x}.
    */
-  public static double sinh(double x)
-  {
+  public static double sinh(double x) {
     return StrictMath.sinh(x);
   }
 
@@ -745,8 +693,7 @@ public class DSPMath {
    * @return the positive square root of a. If the argument is NaN or less than
    * zero, the result is NaN.
    */
-  public static double sqrt(double a)
-  {
+  public static double sqrt(double a) {
     return StrictMath.sqrt(a);
   }
 
@@ -756,8 +703,7 @@ public class DSPMath {
    * @param a an angle, in radians.
    * @return the tangent of the argument.
    */
-  public static double tan(double a)
-  {
+  public static double tan(double a) {
     return StrictMath.tan(a); // default impl. delegates to StrictMath
   }
 
@@ -767,8 +713,7 @@ public class DSPMath {
    * @param x The number whose hyperbolic cosine is to be returned.
    * @return The hyperbolic cosine of {@code x}.
    */
-  public static double tanh(double x)
-  {
+  public static double tanh(double x) {
     return StrictMath.tanh(x);
   }
 
@@ -781,8 +726,7 @@ public class DSPMath {
    * @param angrad an angle, in radians
    * @return the measurement of the angle {@code angrad} in degrees.
    */
-  public static double toDegrees(double angrad)
-  {
+  public static double toDegrees(double angrad) {
     return angrad * 180.0 / PI;
   }
 
@@ -794,8 +738,7 @@ public class DSPMath {
    * @param angdeg an angle, in degrees
    * @return the measurement of the angle {@code angdeg} in radians.
    */
-  public static double toRadians(double angdeg)
-  {
+  public static double toRadians(double angdeg) {
     return angdeg / 180.0 * PI;
   }
 
